@@ -54,4 +54,4 @@
     由于集中式分布式过于依赖服务器，这时候分布式VCS系统就出现了，这里没有依赖服务器，当服务器无法正常工作时，Client可以在本地commit，然后在服务器修复后继续commit代码，这是分布式和集中式的本质区别，典型的产品就是Git，Git主要的指令有*status*,*add*,*commit*,*push*,*pull*,工作流程和SVN差不多，先从服务器clone或pull代码，然后在本地修改和commit之后push到服务器，出现conflict的时候也是依据本地来决定保留哪一块。
     
 ###**4.交作业的方式**###
-* 进入[FE-Study](https://github.com/ITEC-ELWG/FE-Study)查看里面的部署说明，完成初级任务传送门的任务1.
+* 进入[FE-Study](https://github.com/ITEC-ELWG/FE-Study)查看里面的部署说明，完成初级任务传送门的任务1。
