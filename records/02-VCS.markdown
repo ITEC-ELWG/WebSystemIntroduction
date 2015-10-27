@@ -33,11 +33,12 @@
 * 版本控制系统的发展
 
     * 原始VCS 
+    
       人为管理版本控制 
 
     * 本地VCS  
     
-     ![](http://d.pcs.baidu.com/thumbnail/298466c4dd5b4d54526aae5d859268ad?fid=758858006-250528-313667955532059&time=1445947200&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-F1TrPAza1J40%2F5LrdeE%2FARXQjTA%3D&expires=2h&chkv=0&chkbd=0&chkpc=&dp-logid=6954814370863651836&dp-callid=0&size=c850_u580&quality=100)<br/>
+     ![](http://d.pcs.baidu.com/thumbnail/298466c4dd5b4d54526aae5d859268ad?fid=758858006-250528-313667955532059&time=1445947200&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-F1TrPAza1J40%2F5LrdeE%2FARXQjTA%3D&expires=2h&chkv=0&chkbd=0&chkpc=&dp-logid=6954814370863651836&dp-callid=0&size=c850_u580&quality=100) <br/>
      由图，本地有一个版本控制系统，与工作目录关联，有改动都会被记录到版本控制系统中。这在单人工作的时候可以满足需求，但是当项目越来越大，一个人无法完成的时候，在多人开发的背景下，这种本地VCS系统就显得十分鸡肋了。
      
      
@@ -49,7 +50,7 @@
      
     * 分布式VCS（Git）
     
-    ![](https://photos-3.dropbox.com/t/2/AAAsqVnasRDFq664lsEKEEmusw7rRJNabfdTHzeuREAdWQ/12/484241668/jpeg/32x32/1/1445947200/0/2/git.jpg/CITi8-YBIAEgAiADIAUgBygH/MTt_WhBOHvmk8DVqS2g6UNiMuLhi1ajGU0croYwF4ws?size=1280x960&size_mode=2)<br/>
+     ![](https://photos-3.dropbox.com/t/2/AAAsqVnasRDFq664lsEKEEmusw7rRJNabfdTHzeuREAdWQ/12/484241668/jpeg/32x32/1/1445947200/0/2/git.jpg/CITi8-YBIAEgAiADIAUgBygH/MTt_WhBOHvmk8DVqS2g6UNiMuLhi1ajGU0croYwF4ws?size=1280x960&size_mode=2) <br/>
     由于集中式分布式过于依赖服务器，这时候分布式VCS系统就出现了，这里没有依赖服务器，当服务器无法正常工作时，Client可以在本地commit，然后在服务器修复后继续commit代码，这是分布式和集中式的本质区别，典型的产品就是Git，Git主要的指令有*status*,*add*,*commit*,*push*,*pull*,工作流程和SVN差不多，先从服务器clone或pull代码，然后在本地修改和commit之后push到服务器，出现conflict的时候也是依据本地来决定保留哪一块。
     
 ###**4.交作业的方式**###
