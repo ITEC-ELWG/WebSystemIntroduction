@@ -54,7 +54,7 @@ function my() {
 ![JS数据类型内存示意](images/JS/JS数据类型内存示意.png)
 - JS在**复制变量**时， 对于基本类型的值会创建一个新值， 而对于引用类型的值则复制前后的两个变量将指向同一个对象
 
-![JS复制基本类型的值示意](images/JS/JS复制基本类型的值示果.png)
+![JS复制基本类型的值示意](images/JS/JS复制基本类型的值示意.png)
 ![JS复制引用类型的值示意](images/JS/JS复制引用类型的值示意.png)
 
 示例程序及相应的运行结果如下
@@ -68,6 +68,7 @@ function chainStore() {
 
 chainStore();
 ```
+![JS基本类型复制程序运行结果](images/JS/JS基本类型复制程序运行结果.png)
 ``` javascript
 function chainStore() {
 	var store1=['Nike China'];
@@ -79,7 +80,6 @@ function chainStore() {
 
 chainStore();
 ```
-![JS基本类型复制程序运行结果](images/JS/JS基本类型复制程序运行结果.png)
 ![JS引用类型复制程序运行结果](images/JS/JS引用类型复制程序运行结果.png)
 
 - JS在**传递参数**方面均采用按值传递的方式， 其中引用类型的按值传递如同引用类型变量的复制
@@ -120,8 +120,8 @@ function test() {
 
 test();
 ```
-![JS回调函数复制程序运行结果](images/JS/JS回调函数复制程序运行结果.png)
-####深入理解
+![JS回调函数复制程序运行结果](images/JS/JS回调函数程序运行结果.png)
+#### 深入理解
 - **变量对象**
 每个执行环境都有一个与之关联的变量对象， 即执行环境和变量对象一一对应
 - **作用域**
@@ -147,13 +147,17 @@ doSomething();
 innerSay();
 ```
 ![JS作用链示例程序运行结果1](images/JS/JS作用链示例程序运行结果1.png)
+
 ![JS作用链示例程序运行结果2](images/JS/JS作用链示例程序运行结果2.png)
 - **原型继承**
 每个构造函数都有一个原型对象， 同时都有一个**prototype**属性， **prototype**属性指向构造函数的原型对象， 因此被用来实现基于原型的继承和共享
 - **原型链**
 原型对象都默认会取得一个**constructor**属性，这个属性包含一个指向构造函数（prototype属性所在函数）的指针， 如下
+
 ![JS原型链示意1](images/JS/JS原型链示意1.png)
+
 ![JS原型链示意2](images/JS/JS原型链示意2.png)
+
 示例程序及运行结果如下
 ``` javascript
 function A(x) {
