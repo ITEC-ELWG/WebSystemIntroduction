@@ -252,7 +252,7 @@ console.log(girl.say());
 ```
 ![JS闭包示例程序运行结果](images/JS/JS闭包示例程序运行结果.png)
 - **模块模式**
-模块模式遵循[AMD/CMD规范](http://m.blog.chinaunix,net/uid-26672038-id-4112229.html)
+模块模式遵循[AMD规范](https://github.com/amdjs/amdjs-api/wiki/AMD)或[CMD规范](https://github.com/seajs/seajs/issues/242)
 	1. 建立命名空间和工具模块
 	2. 定义该模块
 	3. 给公共接口添加方法
