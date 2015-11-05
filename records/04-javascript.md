@@ -60,10 +60,10 @@ function my() {
 示例程序及相应的运行结果如下
 ``` javascript
 function chainStore() {
-	var store1='Nike China';
-	var store2=store1;
-	store1='Nike U.S.A.';
-	console.log(store2);
+    var store1='Nike China';
+    var store2=store1;
+    store1='Nike U.S.A.';
+    console.log(store2);
 }
 
 chainStore();
@@ -71,11 +71,11 @@ chainStore();
 ![JS基本类型复制程序运行结果](images/JS/JS基本类型复制程序运行结果.png)
 ``` javascript
 function chainStore() {
-	var store1=['Nike China'];
-	var store2=store1;
-	console.log(store2[0]);
-	store1[0]='Nike U.S.A.';
-	console.log(store2[0]);
+    var store1=['Nike China'];
+    var store2=store1;
+    console.log(store2[0]);
+    store1[0]='Nike U.S.A.';
+    console.log(store2[0]);
 }
 
 chainStore();
@@ -84,11 +84,11 @@ chainStore();
 
 - JS在**传递参数**方面均采用按值传递的方式， 其中引用类型的按值传递如同引用类型变量的复制
 - JS的**函数与调用**
-	-	函数是**第一类对象**
-	-	函数分为**函数表达式**（命名及匿名）以及**函数声明**
-	-	除了声明时定义的形参外， 每个函数都会额外接收两个附加参数**this**（值取决于调用模式）和**arguments**（实际参数）
-	-	**arguments**是一个类似数组的对象， 拥有**length**属性， 但不具备数组方法， 常用于接收不定数量的参数
-	-	调用模式分为以下四类
+    -   函数是**第一类对象**
+    -   函数分为**函数表达式**（命名及匿名）以及**函数声明**
+    -   除了声明时定义的形参外， 每个函数都会额外接收两个附加参数**this**（值取决于调用模式）和**arguments**（实际参数）
+    -   **arguments**是一个类似数组的对象， 拥有**length**属性， 但不具备数组方法， 常用于接收不定数量的参数
+    -   调用模式分为以下四类
 
 |调用模式|调用方式|this指向|
 |:-:|:-:|:-:|
@@ -100,7 +100,7 @@ chainStore();
 - JS的**函数回调**（callback）， 指把函数作为参数传递给另一个函数时， 函数将在另一个函数中被调用， 示例程序及运行结果如下
 ``` javascript
 function a(callback) {      
-	console.log("我是parent函数a");   
+    console.log("我是parent函数a");   
     console.log("调用回调函数");   
     callback();   
 }
@@ -161,12 +161,12 @@ innerSay();
 示例程序及运行结果如下
 ``` javascript
 function A(x) {
-	this.x=x;
+    this.x=x;
 }
  
 A.prototype.a = "a";
 A.prototype.say = function() {
-	console.log("Hi")
+    console.log("Hi")
 }; 
 
 var obj = new A(1);
@@ -180,17 +180,17 @@ obj.say();
 无论在程序哪个地方声明变量， 都等同于在函数顶部进行声明， 例如如下第一个程序实际上等同于第二个程序
 ``` javascript
 (function() {
-	var a = 'One';
-	var b = 'Two';
-	var c = 'Three';
+    var a = 'One';
+    var b = 'Two';
+    var c = 'Three';
 })()
 ```
 ``` javascript
 (function() {
-	var a, b, c;
-	a = 'One';
-	b = 'Two';
-	c = 'Three';
+    var a, b, c;
+    a = 'One';
+    b = 'Two';
+    c = 'Three';
 })()
 ```
 示例程序及运行结果如下
@@ -198,8 +198,8 @@ obj.say();
 var v = 'Hello World';
 
 (function() {
-	console.log(v);
-	var v = 'I love you';
+    console.log(v);
+    var v = 'I love you';
 })()
 ```
 ![JS变量提升示例程序运行结果](images/JS/JS变量提升示例程序运行结果.png)
@@ -211,12 +211,12 @@ bar(); // 报错，缺少对象
 
 // 函数声明  
 function foo() {
-	console.log("local foo");  
+    console.log("local foo");  
 }
 
 //函数表达式  
 var bar = function() {
-	console.log("local bar");  
+    console.log("local bar");  
 };
 ```
 ![JS函数提升示例程序运行结果](images/JS/JS函数提升示例程序运行结果.png)
@@ -228,12 +228,12 @@ var bar = function() {
 调用一次后就消失， 适用于一次性的任务， 可以避免声明全局变量。 通常有如下两种写法
 ``` javascript
 (function() {
-	//模块1的所有代码
+    //模块1的所有代码
 }());
 ```
 ``` javascript
 (function() {
-	//模块1的所有代码
+    //模块1的所有代码
 })();
 ```
 - **闭包**
@@ -253,9 +253,9 @@ console.log(girl.say());
 ![JS闭包示例程序运行结果](images/JS/JS闭包示例程序运行结果.png)
 - **模块模式**
 模块模式遵循[AMD规范](https://github.com/amdjs/amdjs-api/wiki/AMD)或[CMD规范](https://github.com/seajs/seajs/issues/242)
-	1. 建立命名空间和工具模块
-	2. 定义该模块
-	3. 给公共接口添加方法
+    1. 建立命名空间和工具模块
+    2. 定义该模块
+    3. 给公共接口添加方法
 
 #### 优化
 - 把script标签放在文档的末尾， /body之前。 这样可以使得整个网页加载完后在去加载JS文件， 不会影响用户的阅读
