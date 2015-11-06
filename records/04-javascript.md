@@ -136,8 +136,10 @@ function my() {
 主要介绍了如何利用Chrome的DevTools debug进行JS代码的调试
 #### 断点设置
 - 实际调试过程中，可通过左边的source标签，打开对应的JS文件
+
 ![JS文件](images/JS/JS文件.png)
 - 鼠标点击代码行号就可以在相应位置设置/删除断点。同时，添加的每个断点都会出现在的 Breakpoints列表中
+
 ![JS断点](images/JS/JS断点.png)
 - 通过右上方的![](images/JS/断点启用.png)按钮可启用（![](images/JS/断点启用.png)）或禁用（![](images/JS/断点禁用.png)）所有断点
 
