@@ -1,4 +1,4 @@
-﻿# Web系统概论培训记录（5）
+# Web系统概论培训记录（5）
 
 ------
 
@@ -30,13 +30,7 @@
 ### LAMP简介
 - Linux + Apache + Mysql + PHP/Python是一组常见的搭建动态网站或者服务器的开源软件，共同组成了一个强大的web应用程序平台。
 - PHP是一种脚本语言，可以内嵌到HTML中，十分方便。
-```
-    <body>
-        <?php 
-        echo "Hello world!";
-        ?>
-    </body>
-```
+
 
 ------
 
@@ -44,95 +38,26 @@
 ###PHP语法
 - PHP标签
 PHP的标记 <?php 和 ?> 如果文件内容是纯PHP代码，最好在文件末尾删除结束标记。
-```
-    <?php
-    echo "Hello world!";
-    
-    //somecode
-    -------------------------------------------------------
-
-    <p>something</p>
-    <?php echo 'Hello world!'; ?>
-    <p>another thing</p>
-    
-```
-
 - 数据类型
 PHP是一种弱数据类型，声明时无须指定类型。PHP支持8种类型，boolen（布尔型）、integer（整型）、float（浮点型）、string（字符串）、array（数组）、object（对象）、resource（资源）、NULL（无类型）。用var_dump()来查看变量的值和类型，用echo来输出值。
 PHP可以转换数据类型，有自动转换和强制转换
-
-```
-    //自动转换
-    $foo = 5 . "10 eggs";
-    echo $foo;//输出"510 eggs"
-    
-    $foo = 5 + "10";
-    echo $foo; //输出 15
-
-    //强制转换  
-    var_dump((int)$foo); //类型为int
-```
-
 - 比较运算符
 '==' 和 '===' 的区分，'=='会忽略两个值的类型，但'===' 除了值相等还会比较两个值的类型。
-```
-    $a = 5;
-    var_dump($a == '5');//reture true
-    var_dump($a == 5);//reture true
-    var_dump($a === '5');//reture false
-    var_dump($a === 5);//reture true
-    
-    //strpos函数是字符串查找函数，返回第一次出现待查字符串出现的位置
-
-    //返回0，不会进入if语句
-    if(strpos('abcd', 'a')){
-    }
-    
-    //返回0, 不严格等于false，会进入if语句
-    if(strpos('abcd', 'a') !== false){
-    }
-
-```
-
 - 字符串的表示
 单引号：不会对字符串里的特殊字符和变量进行解析
 双引号：会对字符串里的特殊字符，如换行符和变量名进行解析
 Nowdoc结构：和单引号功能一样，不过更加适合表示多行的字符串，不需要用字符串连接符。
 Heredoc结构：和双引号功能一样，不过更加适合表示多行的字符串，不需要用字符串连接符。
 
-```
-    $single_quotes = 'this is a simple string';
-    
-    $price  = 6.5;
-    //$price会解析为6.5，\n会解析为换行符
-    $double_quotes = "the apple cost $price dollars.\n it's too expenseve!";
-    
-    $str = <<<'EDO'
-    this is a example of string
-    using nowdoc sytax
-    EDO;
 
-    //$a 会解析为字符串"heredoc"
-    $a = 'heredoc';
-    $str = <<<EDO
-    this is a example of string
-    using $a sytax
-    EDO;
-```
 ####思考题
 如果一段文本中不包含需要解析的字符串，是选择单引号还是双引号？
 解答：理论上单引号和双引号都可以选择，但是双引号会有一个解析的过程，从系统运行的效率来看，此时应该选择单引号。
--  常量定义
-```
-    define("SAMPLE_CONSTANTS", 'sample_value')
-```
-
+-  常量定义define`("SAMPLE_CONSTANTS", 'sample_value')`
 - 全局变量
 PHP中有许多预定义变量都是超全局的，意味着它们在一个脚本的全部作用域都可见，如 $_GET。GET变量是获取浏览器地址栏提交的信息，与之对应的POST变量是获取表单提交的信息。
-
 - PHP扩展
 PHP有很多扩展，在需要实现一个功能之前，可以查看PHP是否已经实现了相应扩张，也可以自己写扩展。
-
 - 连接数据库
 推荐使用mysqli或者PDO来取代mysql扩展
 **注意**: 数据库插入数据要谨慎，不能太相信用户的输入，接受用户的数据之前要先过滤！
@@ -141,15 +66,14 @@ PHP有很多扩展，在需要实现一个功能之前，可以查看PHP是否�
 
 ###Apache和Nginx服务器
 - Linux基本命令
- - cd(切换文件路径)，ls(列出当前文件)
- - yum(安装更新包)
- - vim(文本编辑器)
- 
+- cd(切换文件路径)，ls(列出当前文件)
+- yum(安装更新包)
+- vim(文本编辑器)
 - apache服务器的安装和配置（windows用户推荐）
 - nginx+php-fpm服务器的安装和配置（Linux用户推荐）
 
 --------
- 
+
 ###mysql
 - 关系型数据库，基本单元：表，列；类似于对象和属性的关系。
 - 设计规范：三范式，字段尽量不要冗余，适当的冗余可以提高查询效率。
