@@ -27,8 +27,9 @@
 ![(dependency](images/dependency.jpg)
 
 以c++为例的依赖关系说明图。
+
 **注意：jQuery版本更新迅速，旧项目维护时候应使用该项目对应的jQuery版本，使用新版本开发新项目时候，尽量不使用deprecated的API。**
-----
+
 ### Main Part
 
 ###### 1. jQuery结构模型
@@ -65,13 +66,16 @@ return jQuery;
 各分支使用例子见作业要求看的w3cSchool-jQuery部分。
 ##### 3. jQuery链式语法
 
-eg: `$('div').attr(color)`返回值仍是一个jQuery对象可以继续调用jQuery的操作，以此类推实现链式语法。
+eg: `$('div').first().css('width', 100).show().slideDown();`
+
+jQuery对象原型上的每一个API，返回值仍是一个jQuery对象，可以在反复其上继续调用jQuery的API，这就是所谓的链式语法。
 
 ##### 4. jQuery选择器的使用
 
 1. `$('div .left')`表示查找div元素中的class="left"的元素；
 2. `$('<p></p>')`表示创建了一个新的包含p元素的jQuery对象，**但是该元素仅存在于内存中，必须手动添加到DOM树才可见**；
-3. `$(function(){...})`表示加载完成时调用此函数.
+3. `$(function(){...})`表示加载完成时调用此函数
+
 注：以上三种情况为常用方式，不代表全部用法。
 
 ##### 5. jQuery对象
