@@ -46,15 +46,30 @@ _**前端的数据永远都是不可信的**_,因此仅在前端进行用户输�
 
 - MVC（Model-View-Controller）：
 
-  - 模型（Model）：主要处理数据层，例如数据库的增删查找。
-  - 视图（View）：主要负责展示数据，呈现页面。
-  - 控制器（Controller）：主要负责业务逻辑，从视图读取数据，控制用户输入，并向模型发送数据。
+  - 模型（Model）：程序应用功能的实现，程序逻辑的实现。在PHP中负责与数据的增删查找。
+  - 视图（View）：图形界面逻辑。在PHP中负责展示输出，处理如何调用模板、需要的资源文件。
+  - 控制器（Controller）：负责转发请求，对请求处理。在PHP中根据请求决定调用的视图及使用数据。
 
   - 以上三者的关系图，如下图所示：
 
 ![MVC-Process](images/MVC-Process.jpg)
 
 - 如何用PHP实现一个最简单的MVC框架
+
+MVC的目录结构如下
+  
+```
+	 /*
+ 	├─www                       # 网站根目录
+ 	│  ├─controller             # 控制器目录
+ 	│  │  ├─Controller.php      # 控制器
+ 	│  ├─model                  # 模型目录
+ 	│  │  ├─model.php           # model模型
+ 	│  ├─view                   # 视图目录
+ 	│  │  ├─index.php           # index视图
+ 	│  ├─index.php              # 入口文件
+ */
+```
 
 Controller.php
 
@@ -76,7 +91,8 @@ index.php
 
 ```php
 	<?php
-	//http://localhost?c=Example&m=test&p=hello
+	//http://localhost/index.php?c=Example&m=test&p=hello
+	//以上URL看出，访问的文件是index.php，同时含有三个参数c、m、p。
 	$controller = $_GET['c'];
 	$method = $_GET['m'];
 	$parameter = $_GET['p'];
@@ -88,6 +104,8 @@ index.php
 	$controllerInstance->$method();
 	?>
 ```
+
+- 对MVC架构[更加详细的说明](http://www.jb51.net/article/60796.htm)
 
 - **常用的框架**
 
