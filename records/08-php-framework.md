@@ -120,4 +120,4 @@ $controllerInstance->$method();
     - mysql:《高性能mysql》
     - Linux：《鸟哥的Linux私房菜：基础篇》
     - 自学网站：[慕课网](http://www.imooc.com/)
-    - 详情查看ITEC-ELWG/PHP-study/[php学习推荐书籍和网站.md](https://github.com/ITEC-ELWG/PHP-study/blob/master/php%E5%AD%A6%E4%B9%A0%E6%8E%A8%E8%8D%90%E4%B9%A6%E7%B1%8D%E5%92%8C%E7%BD%91%E7%AB%99.md)
+    - 详情查看[php学习推荐书籍和网站](https://github.com/ITEC-ELWG/PHP-study/blob/master/php%E5%AD%A6%E4%B9%A0%E6%8E%A8%E8%8D%90%E4%B9%A6%E7%B1%8D%E5%92%8C%E7%BD%91%E7%AB%99.md)
