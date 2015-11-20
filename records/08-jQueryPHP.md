@@ -68,7 +68,7 @@ MVC的目录结构如下
  	│  ├─view                   # 视图目录
  	│  │  ├─index.php           # index视图
  	│  ├─index.php              # 入口文件
- */
+        */
 ```
 
 Controller.php
